@@ -15,6 +15,7 @@ print(purchases)
 purchases = pd.DataFrame(data, index=['June', 'Robert', 'Lily', 'David'])
 print(purchases)
 """
+"""
 #Read the data from a csv file
 df = pd.read_csv('test_data.csv')
 print(df)
@@ -22,3 +23,7 @@ print(df)
 #Remove auto generated indexes
 df = pd.read_csv('test_data.csv',index_col=0)
 print(df)
+"""
+#Read the data from a json file
+df2 = pd.read_json('data.json')
+print(df2)

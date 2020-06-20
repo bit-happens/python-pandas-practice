@@ -1,14 +1,17 @@
-person = {}
+import pandas as pd
+"""
+data = {
+	'apples': [3,2,0,1],
+	'oranges': [0,3,7,2]
+}
 
-person['leo']= {
-	'name': 'leo',
-	'address': '21 ave, Carlton, CA 908932', 
-	'phone_no': '777-9311',
-	'email_id': None
-	}
-
+p = pd.DataFrame(data, index=['June', 'Robert', 'Lily', 'David'])
 import json
-s = json.dumps(person)
+s = json.dumps(p)
 
 with open("data.json", "w") as f:
 	f.write(s)
+"""
+df = pd.read_csv(r'test_data.csv')
+df.to_json(r'data.json')
+
